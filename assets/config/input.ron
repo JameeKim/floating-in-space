@@ -1,0 +1,21 @@
+(
+    axes: {
+        "move_front_back": Emulated(
+            pos: Key(W),
+            neg: Key(S),
+        ),
+        "move_right_left": Emulated(
+            pos: Key(D),
+            neg: Key(A),
+        ),
+        "move_up_down": Emulated(
+            pos: Key(Space),
+            neg: Key(LShift),
+        ),
+        "roll_clock_counterclock": Emulated(
+            pos: Key(E),
+            neg: Key(Q),
+        ),
+    },
+    actions: {},
+)

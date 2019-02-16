@@ -1,0 +1,50 @@
+#![enable(implicit_some)]
+(
+    entities: [
+        (
+            data: (
+                light: (
+                    ambient_color: ((0.2, 0.2, 0.2, 0.2)),
+                ),
+            ),
+        ),
+        (
+            data: (
+                transform: (),
+                camera: Perspective((
+                    aspect: 1.0,
+                    fovy: 1.0,
+                    znear: 0.1,
+                    zfar: 2000.0,
+                )),
+                auto_fov: (),
+                fly_movement: (
+                    speed: 10.0,
+                ),
+                free_rotation: (
+                    sensitivity_side: 0.8,
+                    sensitivity_updown: 0.8,
+                    roll_speed: 20.0,
+                ),
+            ),
+        ),
+        (
+            parent: 1,
+            data: (
+                transform: (),
+                light: (
+                    light: Point((
+                        color: (1.0, 1.0, 1.0, 1.0),
+                        intensity: 5.0,
+                        radius: 5.0,
+                    )),
+                ),
+            ),
+        ),
+        (
+            data: (
+                gltf: File("gltf/map.glb", GltfSceneFormat, (flip_v_coord: true)),
+            ),
+        ),
+    ],
+)

@@ -1,0 +1,16 @@
+#![enable(implicit_some)]
+Text(
+    transform: (
+        id: "loading_text",
+        width: 300.0,
+        height: 50.0,
+        anchor: Middle,
+    ),
+    text: (
+        text: "Loading",
+        font_size: 50.0,
+        font: File("font/square.ttf", Ttf, ()),
+        color: (1.0, 1.0, 1.0, 1.0),
+        align: Middle,
+    ),
+)

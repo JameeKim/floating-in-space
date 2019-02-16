@@ -1,0 +1,9 @@
+(
+    stdout: Colored,
+    log_file: None,
+
+    level_filter: Info,
+    log_gfx_device_level: Some(Warn),
+
+    allow_env_override: true,
+)

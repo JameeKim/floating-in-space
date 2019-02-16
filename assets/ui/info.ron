@@ -1,0 +1,46 @@
+#![enable(implicit_some)]
+Container(
+    transform: (
+        id: "info_dialog",
+        width: 1060.0,
+        height: 400.0,
+        anchor: Middle,
+    ),
+    background: (
+        image: Data(Rgba((0.0, 0.0, 0.0, 0.5), (channel: Srgb))),
+    ),
+    children: [
+        Text(
+            transform: (
+                id: "info_text",
+                width: 1000.0,
+                height: 300.0,
+                y: -180.0,
+                anchor: TopMiddle,
+            ),
+            text: (
+                text: "Welcome to \"Floating in Space\"!\n\n  This is a simple game to showcase how floating in the space would feel like, where there is no absolute direction (e.g. up, down, etc.). If you feel lost after closing this dialog, you can re-open this by pressing 'Escape' key on your keyboard.\n\n* W / S - move front / back\n* A / D - move left / right\n* Space / Left Shift - move up / down\n* Mouse movement - rotate view\n* E / Q - rotate clockwise / counter-clockwise\n\n  To quit the game, press Alt and F4.",
+                font_size: 20.0,
+                font: File("font/NanumGothic.ttf", Ttf, ()),
+                color: (1.0, 1.0, 1.0, 1.0),
+                align: TopLeft,
+                line_mode: Wrap,
+            ),
+        ),
+        Button(
+            transform: (
+                id: "info_button",
+                width: 50.0,
+                height: 30.0,
+                y: 25.0,
+                anchor: BottomMiddle,
+                mouse_reactive: true,
+            ),
+            button: (
+                text: "OK",
+                font_size: 20.0,
+                normal_text_color: (1.0, 1.0, 1.0, 1.0),
+            ),
+        ),
+    ],
+)
